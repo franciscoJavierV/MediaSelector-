@@ -8,23 +8,39 @@
     text-align: center;
     font-size: 38px;
 }
-.likes__content{
+.likes__form{
+    margin: 0 auto;
     width: 100%;
 }
-.likes__content-colum{
-    padding: 100px;
-}
 
-.checkbox {
-    margin: 15px;
-    display: inline;
+.likes__form-data{
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    padding: 3%;
 }
-
+.likes__column-label{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+.likes__column-label:hover{
+    background-color: red;
+}
+.likes__column__checkbox{
+    
+}
+.likes__column-label{
+    margin: 10px;
+}
 .likes__button{
     width: 100px;
     height: 30px;
     background-color: rgb(56, 113, 187);
     color: white;
+    font-size: large;
+    margin-top: 30px;
     border: 1px solid white;
     border-radius: 5px;
 }
