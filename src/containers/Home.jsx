@@ -2,7 +2,8 @@ import React from 'react';
 import './styles/Home.css';
 import fractured from './assets/fractured.jpg';
 import umbrell from './assets/umbrella.jpg';
-import laotra from './assets/split.jpg';   
+import laotra from './assets/split.jpg';  
+
 function Home() {
     return (
         <>
