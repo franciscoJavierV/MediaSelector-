@@ -1,0 +1,104 @@
+.app{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgb(72,73,121);
+    background: radial-gradient(circle, rgba(72,73,121,1) 0%, rgba(72,163,39,1) 100%);
+}
+.mensaje{
+   text-align: center;
+   padding: 10px;
+}
+.mensaje__tittle{
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.mensaje__article{
+   margin:0 auto;
+    width: 500px;
+    height: 300px;
+    border:1px solid white;
+}
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 30px;
+  height: 100vh;
+  min-height: calc(
+    100vh - 200px
+  ); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
+}
+
+.login__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px 68px 40px;
+}
+
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container-socials{
+   text-align: center;
+   width: 100px;
+}
+.media{
+    width: 100px;
+    height: 40px;
+}
+.login__container--form label {
+  font-size: 14px;
+}
+.login__container--button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.login__container--input {
+  padding: 7px;
+  margin: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px white solid;
+  outline: none;
+}
+.login__container--remember-me {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login__container--remember-me a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+
+.login__container--register {
+  font-size: 14px;
+}
+
+.login__container--register a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.login__container--register a:hover {
+  text-decoration: underline;
+}

@@ -1,12 +1,19 @@
 import React from 'react';
-import './styles/App.css';
-
+//router
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
+//pages
+import Login from '../components/LoginPage'
+//styles
+import './styles/App.css'
+import { LinkedInPopUp } from 'react-linkedin-login-oauth2';
 function App() {
   return (
-    <div className="app">
-      
-      <h1>hola</h1>
-    </div>
+    <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Login}/>
+          <Route exact path="/linkedin" component={LinkedInPopUp} />
+        </Switch>
+    </BrowserRouter>
   );
 }
 
