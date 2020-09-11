@@ -1,0 +1,37 @@
+.checkbox {
+    margin: 15px;
+    display: inline;
+}
+
+.column {
+    padding: 100px;
+}
+
+#info{
+    position: absolute;
+    width: 270px;
+    height: 150px;
+}
+
+p {
+    visibility: hidden;
+}
+   
+#column:hover #info {
+    opacity: 1;
+}
+
+#terror:hover p#def {
+    visibility: visible;
+    position: absolute;
+    font-size: 12px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(56, 113, 187);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './containers/App';
+import Likes from './containers/Likes';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Likes />
   </React.StrictMode>,
   document.getElementById('root')
 );
