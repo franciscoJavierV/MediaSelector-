@@ -2,16 +2,17 @@ import React from 'react';
 import './styles/Home.css';
 import fractured from './assets/fractured.jpg';
 import umbrell from './assets/umbrella.jpg';
+<<<<<<< HEAD
 import laotra from './assets/split.jpg';  
+=======
+import laotra from './assets/split.jpg';   
+>>>>>>> e625108d51c1441ceb3bdc97856d64b67a075071
 
 function Home() {
     return (
-        <>
-        
+        <div className="done">
         <div className="slides">
-            <h1>
-                Novedades
-            </h1>
+            
             <div className="images">
                 <div id="progress-bar-container">
                     <div id="progress-bar"></div>
@@ -36,7 +37,7 @@ function Home() {
                 <a target="_blank" href="assets/umbrella.jpg">
                     <img src={umbrell} alt="The Umbrella Academy" width="600px" height="400px"></img>
                 </a>
-                <div class="desc">The Umbrella Academy</div>
+                <div className="desc">The Umbrella Academy</div>
             </div>
 
             <div className="image">
@@ -53,7 +54,7 @@ function Home() {
                 <div className="desc">Split</div>
             </div>
         </section>
-        </>
+        </div>
     )
 }
 export default Home;
