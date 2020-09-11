@@ -28,8 +28,6 @@ function Likes() {
               Comedia
             </label>
             <br></br>
-          </div>
-          <div className="likes__form-data-group2">
             <label className="likes__column-label">
               <input
                 className="likes__column__checkbox"
@@ -37,17 +35,97 @@ function Likes() {
                 value="terror"
                 type="checkbox"
               />
-              Terror
+              Romance
             </label>
             <br></br>
             <label className="likes__column-label">
               <input
                 className="likes__column__checkbox"
-                name="terror"
+                name="romance"
                 value="comedia"
                 type="checkbox"
               />
-              Comedia
+              Acción
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="comedia"
+                value="terror"
+                type="checkbox"
+              />
+              Ciencia ficción
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="romance"
+                value="comedia"
+                type="checkbox"
+              />
+              Telenovelas
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="comedia"
+                value="terror"
+                type="checkbox"
+              />
+              Dramas
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="romance"
+                value="comedia"
+                type="checkbox"
+              />
+              Misterio
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="comedia"
+                value="terror"
+                type="checkbox"
+              />
+              Animes
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="romance"
+                value="comedia"
+                type="checkbox"
+              />
+              Fantasia
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="comedia"
+                value="terror"
+                type="checkbox"
+              />
+              Documentales
+            </label>
+            <br></br>
+            <label className="likes__column-label">
+              <input
+                className="likes__column__checkbox"
+                name="romance"
+                value="comedia"
+                type="checkbox"
+              />
+              Policiales
             </label>
             <br></br>
         <button type="submit" className="likes__button">

@@ -29,7 +29,7 @@ function LoginPage(props) {
       id: response.profileObj.googleId,
     };
     console.log(data);
-    if (data) window.location.href = "/likes";
+    if (data) window.location.href = "/home";
   };
   const responseFacebook = (response) => {
     const data = {

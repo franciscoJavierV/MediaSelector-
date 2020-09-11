@@ -1,0 +1,24 @@
+.gallery {
+    height: 500px;
+}
+  
+div.image {
+    margin: 35px;
+    border: 1px solid white;
+    float: left;
+    width: 180px;
+}
+    
+div.image:hover {
+    border: 1.5px solid wheat;
+}
+    
+div.image img {
+  width: 100%;
+  height: 150px;
+}
+    
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
