@@ -1,8 +1,7 @@
 .app{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: rgb(72,73,121);
-    background: radial-gradient(circle, rgba(72,73,121,1) 0%, rgba(72,163,39,1) 100%);
+
 }
 .mensaje{
    text-align: center;

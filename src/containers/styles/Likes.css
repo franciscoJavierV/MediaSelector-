@@ -1,11 +1,25 @@
+.likes{
+ padding: 20px;
+ margin: 10px 20px;
+ display: block;
+}
+.likes-tittle{
+    color: white;
+    text-align: center;
+    font-size: 38px;
+}
+.likes__content{
+    width: 100%;
+}
+.likes__content-colum{
+    padding: 100px;
+}
+
 .checkbox {
     margin: 15px;
     display: inline;
 }
 
-.column {
-    padding: 100px;
-}
 .likes__button{
     width: 100px;
     height: 30px;
