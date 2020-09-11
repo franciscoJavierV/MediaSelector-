@@ -2,10 +2,15 @@ import React from "react";
 import "./styles/Likes.css";
 
 function Likes() {
+
+    const handleSubmit= (e) =>{
+        e.preventDefault()
+        window.location.href = '/home'
+    }
   return (
     <div className="likes">
       <h1 className="likes-tittle">Conozcamos tus gustos...</h1>
-      <form className="likes__form">
+      <form className="likes__form" onSubmit={handleSubmit}>
         <div className="likes__form-data">
           <div className="likes__form-data-group1">
             <label className="likes__column-label">
@@ -128,7 +133,7 @@ function Likes() {
               Policiales
             </label>
             <br></br>
-        <button type="submit" className="likes__button">
+        <button type="submit"  className="likes__button">
           ¡Listo!
         </button>
           </div>
