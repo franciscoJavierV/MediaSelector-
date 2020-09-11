@@ -1,7 +1,8 @@
 :root {
-  --main-purple-findally: #540e87;
-  --main-yellow-findally: #f5cc00;
-  --main-orange-findally: #feae3b;
+  --main-background-color: #413a4b;
+  --main-logo-color: #657270;
+  --main-orange-color: #88ab95;
+  --main-textborder-color: #e1e3a6;
 }
 *{box-sizing: border-box;}
 
@@ -17,8 +18,8 @@ a:hover {
 
 body {
   margin: 0;
-  background: rgb(72,73,121);
-  background: radial-gradient(circle, rgba(72,73,121,1) 0%, rgba(72,163,39,1) 100%);
+  background-color: var(--main-background-color) ;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

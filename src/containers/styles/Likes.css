@@ -50,10 +50,6 @@
     height: 150px;
 }
 
-p {
-    visibility: hidden;
-}
-   
 .column:hover #info {
     opacity: 1;
 }

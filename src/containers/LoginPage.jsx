@@ -47,8 +47,13 @@ function LoginPage(props) {
     <>
       <div className="app">
         <section className="mensaje">
-          <h1 className="mensaje__tittle">tittle</h1>
-          <article className="mensaje__article"></article>
+          <h1 className="mensaje__tittle">Find Movie</h1>
+          <article className="mensaje__article">
+            <h2>Descubre tu pelicula a solo un click</h2><br/>
+            <div className="texto">
+            En Find Movie podras encontrar recomendaciones de peliculas y series segun tus gustos, tendras acceso a trailers e informacion para que no te pierdas los mejores lanzamientos    
+            </div>
+          </article>
         </section>
         <section className="login">
           <section className="login__container">
