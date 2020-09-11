@@ -46,25 +46,9 @@ function LoginPage(props) {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
-  /*
-     <GoogleLogin
-        clientId="457065273725-kgsd4tai4imdqmopt1hpmerg4cl76u3d.apps.googleusercontent.com"
-        buttonText="Login g"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={"single_host_origin"}
-      />
-      <FacebookLogin
-        appId="317035492712396"
-        icon="fa-facebook"
-        textButton="login fb"
-        autoLoad={false}
-        fields="name,email,picture"
-        onClick={"hi"}
-        callback={responseFacebook}
-      />
-  */
-
+  const redirect = () =>{
+    window.location.href = '/home'
+  }
   return (
     <>
     <div className="app">
@@ -92,7 +76,7 @@ function LoginPage(props) {
               placeholder="Contraseña"
               onChange={handleInput}
             />
-            <button className="login__container--button">Iniciar sesión</button>
+            <button onClick={redirect} className="login__container--button">Iniciar sesión</button>
             <div className="login__container-socials">
               <GoogleLogin
                 className="media"
