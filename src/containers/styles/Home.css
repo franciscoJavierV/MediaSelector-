@@ -1,7 +1,10 @@
 .gallery {
     height: 500px;
 }
-  
+ .slides{
+    background: rgb(39,163,120);
+    background: radial-gradient(circle, rgba(39,163,120,1) 0%, rgba(88,72,121,1) 100%);
+ } 
 div.image {
     margin: 35px;
     border: 1px solid white;
