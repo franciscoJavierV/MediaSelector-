@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
@@ -24,30 +23,24 @@ function LoginPage(props) {
     const data = {
       name: response.profileObj.name,
       email: response.profileObj.email,
-      id: response.profileObj.googleId,
-      apiKeyToken:
-        "45e9b46a21c4b55e0ccf1f024a55d5ddf57f983a21091e3327b8616ed2582c62",
-    };
-    axios
-      .post("http://localhost:3000/provider", data)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      id: response.profileObj.googleId
+    }
+    console.log(data)
+    if(data)
+      window.location.href= '/likes' 
   };
   const responseFacebook = (response) => {
     const data = {
       name: response.name,
       email: response.email,
       id: response.userID,
-      apiKeyToken:
-        "45e9b46a21c4b55e0ccf1f024a55d5ddf57f983a21091e3327b8616ed2582c62",
     };
-    axios
-      .post("http://localhost:3000/provider", data)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    if(data)
+    window.location.href = '/likes'
+    console.log(data)
   };
   const redirect = () =>{
-    window.location.href = '/home'
+    window.location.href = '/likes'
   }
   return (
     <>
