@@ -5,6 +5,7 @@ import { loginReq } from "../actions";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import "./styles/LoginPage.css";
+
 function LoginPage(props) {
   const [form, setValues] = useState({
     email: "",
@@ -29,7 +30,7 @@ function LoginPage(props) {
       id: response.profileObj.googleId,
     };
     console.log(data);
-    if (data) window.location.href = "/home";
+    if (data) window.location.href = "/likes";
   };
   const responseFacebook = (response) => {
     const data = {
@@ -48,10 +49,17 @@ function LoginPage(props) {
       <div className="app">
         <section className="mensaje">
           <h1 className="mensaje__tittle">Find Movie</h1>
+          <div className="mensaje__buttons">
+            <Link to=""><p className="mensaje__buttons-txt">Blog</p></Link>
+            <Link to=""><p className="mensaje__buttons-txt">Nosotros</p></Link>
+            <Link to=""><p className="mensaje__buttons-txt">Contacto</p></Link>
+          </div>
           <article className="mensaje__article">
-            <h2>Descubre tu pelicula a solo un click</h2><br/>
+            <h2 className='mensaje__article-h2'>Descubre tu pelicula a solo un click</h2>
             <div className="texto">
-            En Find Movie podras encontrar recomendaciones de peliculas y series segun tus gustos, tendras acceso a trailers e informacion para que no te pierdas los mejores lanzamientos    
+              En Find Movie podras encontrar recomendaciones de peliculas y
+              series segun tus gustos, tendras acceso a trailers e informacion
+              para que no te pierdas los mejores lanzamientos
             </div>
           </article>
         </section>
@@ -85,8 +93,6 @@ function LoginPage(props) {
                   onFailure={responseGoogle}
                   cookiePolicy={"single_host_origin"}
                 />
-              </div>
-              <div>
                 <FacebookLogin
                   appId="317035492712396"
                   icon="fa-facebook"

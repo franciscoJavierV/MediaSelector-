@@ -1,8 +1,10 @@
 :root {
-  --main-background-color: #413a4b;
-  --main-logo-color: #657270;
-  --main-orange-color: #88ab95;
-  --main-textborder-color: #e1e3a6;
+  --main-backgroud-black-color: #262626;
+  --main-background-yellow-color: #e3d208;
+  --main-line-color: #88ab95;
+  --main-subtittle-color: #9AB999;
+  --main-form-text-color:#282828;
+
 }
 *{box-sizing: border-box;}
 
