@@ -5,6 +5,7 @@ import App from './containers/App';
 import { Provider } from "react-redux";
 import { createStore , compose} from "redux";
 import reducer from './reducers/index';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const state={};
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

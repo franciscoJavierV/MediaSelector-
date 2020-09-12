@@ -1,8 +1,9 @@
 .gallery {
     height: 500px;
+    color: white;
 }
  .done{
-     height: 100vh;
+    height: 100vh;
     background: rgb(39,163,120);
     background: radial-gradient(circle, rgba(39,163,120,1) 0%, rgba(88,72,121,1) 100%);
  } 
@@ -10,6 +11,7 @@ div.image {
     border: 1px solid white;
     float: left;
     width: 180px;
+    height: 230px;
 }
     
 div.image:hover {
@@ -24,4 +26,5 @@ div.image img {
 div.desc {
     padding: 15px;
     text-align: center;
+    color: white;
 }
