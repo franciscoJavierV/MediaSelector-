@@ -5,6 +5,7 @@
  .done{
     height: 100vh;
     background: rgb(39,163,120);
+    padding: 50px;
     background: radial-gradient(circle, rgba(39,163,120,1) 0%, rgba(88,72,121,1) 100%);
  } 
 div.image {

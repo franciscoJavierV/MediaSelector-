@@ -4,10 +4,12 @@ import Carrousel from "../components/Carrousel";
 import fractured from "./assets/fractured.jpg";
 import umbrell from "./assets/umbrella.jpg";
 import laotra from "./assets/split.jpg";
+import Header from "../components/header";
 
 function Home() {
   return (
     <>
+      <Header />
       {/*aca se renderiza el componente de carrousel */}
       <Carrousel />
       <div className="done">

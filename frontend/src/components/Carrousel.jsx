@@ -1,23 +1,24 @@
 
 import './styles/Carrousel.css';
-import React, {useState} from "react";
+import React /*, {useState}*/ from "react";
 import Carousel from "react-bootstrap/Carousel"
 
 function Carrousel() {
+   /*
     const [index, setIndex] = useState(1);
 
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     }
-
+*/
     return (
         <div>
             <Carousel fade="true" interval="5000">
                 <Carousel.Item>
                     <img className="d-block w-100"
-                    src={require("../assets/new1.jpg")}
-                    alt="First Image" 
-                    style={{height: "80vh"}}
+                    src={require("../assets/new1.jpg")} 
+                    style={{height: "40vh"}}
+                    alt=''
                     />
                     <Carousel.Caption>
                         <h3>Pronto</h3>
@@ -28,8 +29,8 @@ function Carrousel() {
                 <Carousel.Item>
                     <img className="d-block w-100"
                     src={require("../assets/new2.jpg")}
-                    alt="Second Image" 
-                    style={{height: "80vh"}}
+                    style={{height: "40vh"}}
+                    alt=''
                     />
                     <Carousel.Caption>
                         <h3>Ya puedes ver</h3>
@@ -40,8 +41,8 @@ function Carrousel() {
                 <Carousel.Item>
                     <img className="d-block w-100"
                     src={require("../assets/new4.jpg")}
-                    alt="Third Image" 
-                    style={{height: "80vh"}}
+                    alt="" 
+                    style={{height: "40vh"}}
                     />
                     <Carousel.Caption>
                         <h3>Proximamente</h3>
