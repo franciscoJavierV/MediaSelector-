@@ -1,7 +1,7 @@
 {
-  "name": "sevendeadlysins",
+  "name": "media-selector-project",
   "version": "1.0.0",
-  "description": "this is an  node js and mongo project build using data from de anime seven deadly sins",
+  "description": "this is an  node js and mongo project with the services ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/franciscoJavierV/SevenDeadlySins.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/franciscoJavierV/SevenDeadlySins/issues"
-  },
-  "homepage": "https://github.com/franciscoJavierV/SevenDeadlySins#readme",
+
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
