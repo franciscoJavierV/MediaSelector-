@@ -53,7 +53,7 @@ function LoginPage(props) {
         <section className="mensaje">
           <h1 className="mensaje__tittle">Find Movie</h1>
           <div className="mensaje__buttons">
-            <Link to=""><p className="mensaje__buttons-txt">Blog</p></Link>
+            <Link to="/AddMovie"><p className="mensaje__buttons-txt">Blog</p></Link>
             <Link to=""><p className="mensaje__buttons-txt">Nosotros</p></Link>
             <Link to=""><p className="mensaje__buttons-txt">Contacto</p></Link>
           </div>
