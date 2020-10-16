@@ -14,13 +14,13 @@ export const loadState = () => {
       }
       const name = readCookie("name");
       const id = readCookie("id");
-      const likedvideos = readCookie("likedvideos");
+      const likedmovies = readCookie("likedmovies");
       const selections = readCookie("selections");
   
       const serializedData = {
         name,
         id,
-        likedvideos,
+        likedmovies,
         selections,
       };
       if (serializedData === null) {

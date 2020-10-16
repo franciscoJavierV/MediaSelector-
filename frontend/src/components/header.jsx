@@ -2,8 +2,17 @@ import React from "react";
 import "./styles/header.css";
 import logo from '../assets/logo.jpg';
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
+import { logoutUser } from "../actions";
 
-function header() {
+function header(props) {
+  const handleLogout = () => {
+    document.cookie = "likedvideos=";
+    document.cookie = "name=";
+    document.cookie = "id=";
+    document.cookie = "selections=";
+    props.logoutUser({});
+  };
   return (
     <div className="header">
       <img
@@ -13,13 +22,17 @@ function header() {
       width='30px'  
       />
       <div className="header-options">
-          <Link className='header__options-btn' to="/">hi</Link>
-          <Link className='header__options-btn' to="/">hi2</Link>
+      <button className="logout" onClick={handleLogout}>log out</button>
+          <Link className='header__options-btn' to="/likes">selections</Link>
+          <Link className='header__options-btn' to="/">likes</Link>
           <Link className='header__options-btn' to="/">hi3</Link>
       </div>
     
     </div>
   );
 }
+const mapDispatchToProps = {
+  logoutUser,
+};
 
-export default header;
+export default connect(null,mapDispatchToProps)(header);

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loginReq , loginSocial, } from "../actions";
+import { loginReq , loginSocial, loginUser, logoutUser } from "../actions";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import "./styles/LoginPage.css";
 
 function LoginPage(props) {
   const [form, setValues] = useState({
-    email: "",
-    contraseña: "",
+    name: "",
+    password: "",
   });
 
   const handleInput = (event) => {
@@ -21,6 +21,8 @@ function LoginPage(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    props.loginUser(form, '/home')
+
   };
 
   const responseGoogle = (response) => {
@@ -40,7 +42,7 @@ function LoginPage(props) {
     };
    // if (data) window.location.href = "/likes";
     console.log(data);
-    if (data) props.loginSocial(data, "/home");
+    if (data) props.loginSocial(data, "/likes");
   };
   const redirect = () => {
     window.location.href = "/likes";
@@ -69,7 +71,7 @@ function LoginPage(props) {
             <h2>Inicia sesión</h2>
             <form className="login__container--form" onSubmit={handleSubmit}>
               <input
-                name="email"
+                name="name"
                 className="login__container--input"
                 type="text"
                 placeholder="Correo"
@@ -82,7 +84,7 @@ function LoginPage(props) {
                 placeholder="Contraseña"
                 onChange={handleInput}
               />
-              <button onClick={redirect} className="login__container--button">
+              <button onClick={handleSubmit} className="login__container--button">
                 Iniciar sesión
               </button>
               <div className="login__container-socials">
@@ -128,7 +130,9 @@ function LoginPage(props) {
 }
 const mapDispatchToProps = {
   loginReq,
+  loginUser,
   loginSocial,
+  logoutUser,
 };
 
 export default connect(null, mapDispatchToProps)(LoginPage);

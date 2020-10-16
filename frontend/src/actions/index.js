@@ -22,6 +22,12 @@ export const setError = (payload) => ({
   payload,
 });
 
+export const logoutUser = (payload) => {
+  return (dispatch) => {
+    dispatch(logoutReq(payload));
+  };
+};
+
 export const loginSocial = (payload, redirectUrl) => {
   return (dispatch) => {
     console.log(payload);
@@ -34,30 +40,31 @@ export const loginSocial = (payload, redirectUrl) => {
 };
 
 
-export const loginUser = ({ email, password }, redirectUrl) => {
+export const loginUser = ({ name, password }, redirectUrl) => {
   return (dispatch) => {
-    const token = Buffer.from(`${email}:${password}`, "utf8").toString(
-      "base64"
-    ); //needed for the basic auth
+    const user ={
+      name : name,
+      password : password
+    }
+   
     var config = {
       method: "post",
-      url: "http://localhost:3000/user/login",
-      data: token,
+      url: "http://localhost:3000/users/new",
+      data: user,
     };
     axios(config)
-      .then(({ data }) => {
-        console.log("data ", data);
-        //creating the cookie
-        document.cookie = `email=${data.user.email}`;
-        document.cookie = `name=${data.user.name}`;
-        document.cookie = `id=${data.user.id}`;
-        document.cookie = `likedvideos=${data.user}`;
-        document.cookie = `selections=${data.user}`;
-        dispatch(loginReq(data.user)); //sended to login req and added to the state
-      })
+    .then(({data})=>{
+      document.cookie = `name=${data.name}`;
+      document.cookie = `id=${data._id}`;
+      document.cookie = `likedmovies=${data.likedmovies}`;
+      document.cookie = `selections=${data.selections}`;
+      dispatch(loginReq(data)); //sended to login req and added to the state
+
+    })
       .then(() => {
-        //window.location.href = redirectUrl;
+        window.location.href = redirectUrl;
       })
+     
       .catch(function (error) {
         console.log(error);
       });

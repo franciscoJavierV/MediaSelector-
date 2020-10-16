@@ -6,7 +6,7 @@ import umbrell from "./assets/umbrella.jpg";
 import laotra from "./assets/split.jpg";
 import Header from "../components/header";
 import { connect } from "react-redux";
-import { setlike } from "../actions";
+import { setlike, logoutUser } from "../actions";
 import axios from "axios";
 
 function Home(props) {
@@ -25,6 +25,8 @@ function Home(props) {
     props.setlike({like})
     console.log('me gusta fractured')
   }
+
+
   const sendtoback=()=>{
     //console.log(likedmovies)
     const data ={
@@ -47,6 +49,7 @@ function Home(props) {
       {/*aca se renderiza el componente de carrousel */}
       <Carrousel />
       <div className="done">
+       
         <section className="gallery">
           <h1>Te recomendamos...</h1>
           <div className="image">
@@ -84,7 +87,8 @@ function Home(props) {
 }
 
 const mapDispatchToProps = {
-  setlike
+  setlike,
+  logoutUser,
 };
 const mapStateToProps = state => {
   return{
