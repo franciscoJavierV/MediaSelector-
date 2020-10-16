@@ -146,8 +146,15 @@ function Likes() {
   );
 }
 const mapDispatchToProps = {
-  
+  setSelection,
+
 };
-const mapStateToProps = {};
+const mapStateToProps = state => {
+  return{
+    selections : state.selections,
+    likedmovies: state.likedmovies,
+    user : state.user
+  }
+};
 export default connect(null,null )(Likes);
 

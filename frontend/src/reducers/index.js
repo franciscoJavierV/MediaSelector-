@@ -20,6 +20,11 @@ const reducer = (state, action) => {
               ...state,
               likedmovies: [...state.likedmovies, action.payload]
             }
+            case 'SET_SELECTIONS':
+              return {
+                ...state,
+                selections: [...state.selections, action.payload]
+              }
       default:
         return state;
     }

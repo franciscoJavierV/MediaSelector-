@@ -5,6 +5,11 @@ export const setlike = payload => ({
   payload,
 });
 
+export const setSelections = payload => ({
+  type: 'SET_SELECTIONS',
+  payload,
+});
+
 export const loginReq = (payload) => ({
   type: "LOGIN_REQ",
   payload,
