@@ -1,7 +1,11 @@
-import React from "react";
+import React , { useState } from "react";
 import "./styles/Likes.css";
 
 function AddMovie() {
+
+  const [form, setValues] = useState({
+    
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
