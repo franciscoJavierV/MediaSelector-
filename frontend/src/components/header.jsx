@@ -24,7 +24,6 @@ function header(props) {
       <div className="header-options">
       <button className="logout" onClick={handleLogout}>log out</button>
           <Link className='header__options-btn' to="/likes">selections</Link>
-          <Link className='header__options-btn' to="/">likes</Link>
           <Link className='header__options-btn' to="/addmovie">Añadir pelicula</Link>
       </div>
     

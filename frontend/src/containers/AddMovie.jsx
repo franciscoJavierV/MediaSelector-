@@ -2,7 +2,6 @@ import React , { useState } from "react";
 import "./styles/Likes.css";
 
 function AddMovie() {
-
   const [form, setValues] = useState({
     
   });
@@ -27,35 +26,31 @@ function AddMovie() {
           className="login__container--input"
           type="text"
           placeholder="Nombre de la película"
-          onChange={handleInput}
         />
         <input
           name="description"
           className="login__container--input"
           type="text"
           placeholder="Descripción"
-          onChange={handleInput}
+          onClick={handleInput}
         />
         <input
           name="duration"
           className="login__container--input"
           type="text"
           placeholder="Duración"
-          onChange={handleInput}
         />
          <input
           name="gender"
           className="login__container--input"
           type="text"
           placeholder="Dirigida por"
-          onChange={handleInput}
         />
         <input
           name="director"
           className="login__container--input"
           type="text"
           placeholder="Dirigida por"
-          onChange={handleInput}
         />
         <button type="submit" className="likes__button">
           Registrar

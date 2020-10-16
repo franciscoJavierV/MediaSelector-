@@ -32,7 +32,7 @@ function LoginPage(props) {
       id: response.profileObj.googleId,
     };
     console.log(data);
-    if (data) window.location.href = "/likes";
+    if (data) window.location.href = "/home";
   };
   const responseFacebook = (response) => {
     const data = {
@@ -40,13 +40,11 @@ function LoginPage(props) {
       email: response.email,
       id: response.userID,
     };
-   // if (data) window.location.href = "/likes";
+    if (data) window.location.href = "/home";
     console.log(data);
-    if (data) props.loginSocial(data, "/likes");
+    if (data) props.loginSocial(data, "/home");
   };
-  const redirect = () => {
-    window.location.href = "/likes";
-  };
+
   return (
     <>
       <div className="app">
@@ -74,7 +72,7 @@ function LoginPage(props) {
                 name="name"
                 className="login__container--input"
                 type="text"
-                placeholder="Correo"
+                placeholder="Name"
                 onChange={handleInput}
               />
               <input
