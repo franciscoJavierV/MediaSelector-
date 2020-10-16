@@ -1,12 +1,29 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from "react";
 import "./styles/Likes.css";
+import { loginUser } from "../actions";
 import { connect } from "react-redux";
 
-function Likes() {
-    const handleSubmit= (e) =>{
-        e.preventDefault()
-        window.location.href = '/home'
-    }
+function Likes(props) {
+
+  const [form, setValues] = useState({
+    name: "",
+    password: "",
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.loginUser(form, '/home')
+
+  };
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <div className="likes">
       <h1 className="likes-tittle">Conozcamos tus gustos...</h1>
@@ -19,6 +36,7 @@ function Likes() {
                 name="romance"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Misterio
             </label>
@@ -29,6 +47,7 @@ function Likes() {
                 name="romance"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Telenovelas
             </label>
@@ -40,6 +59,7 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Animes
             </label>
@@ -50,6 +70,7 @@ function Likes() {
                 name="romance"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Fantasia
             </label>
@@ -60,6 +81,7 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Documentales
             </label>
@@ -70,6 +92,7 @@ function Likes() {
                 name="romance"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Policiales
             </label>
@@ -82,6 +105,7 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Terror
             </label>
@@ -92,6 +116,7 @@ function Likes() {
                 name="terror"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Comedia
             </label>
@@ -102,6 +127,7 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Romance
             </label>
@@ -112,6 +138,7 @@ function Likes() {
                 name="romance"
                 value="comedia"
                 type="checkbox"
+                onChange={handleInput}
               />
               Acción
             </label>
@@ -122,6 +149,7 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Ciencia ficción
             </label>
@@ -132,11 +160,12 @@ function Likes() {
                 name="comedia"
                 value="terror"
                 type="checkbox"
+                onChange={handleInput}
               />
               Dramas
             </label>
             <br></br>
-        <button type="submit"  className="likes__button">
+        <button type="submit"  onClick={handleSubmit} className="likes__button">
           ¡Listo!
         </button>
           </div>
@@ -146,8 +175,9 @@ function Likes() {
   );
 }
 const mapDispatchToProps = {
-  
+  loginUser,
 };
+
 const mapStateToProps = {};
-export default connect(null,null )(Likes);
+export default connect(null,mapDispatchToProps )(Likes);
 
