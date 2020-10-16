@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loginReq } from "../actions";
+import { loginReq , loginSocial, } from "../actions";
 import { GoogleLogin } from "react-google-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import "./styles/LoginPage.css";
@@ -38,8 +38,9 @@ function LoginPage(props) {
       email: response.email,
       id: response.userID,
     };
-    if (data) window.location.href = "/likes";
+   // if (data) window.location.href = "/likes";
     console.log(data);
+    if (data) props.loginSocial(data, "/home");
   };
   const redirect = () => {
     window.location.href = "/likes";
@@ -127,6 +128,7 @@ function LoginPage(props) {
 }
 const mapDispatchToProps = {
   loginReq,
+  loginSocial,
 };
 
 export default connect(null, mapDispatchToProps)(LoginPage);

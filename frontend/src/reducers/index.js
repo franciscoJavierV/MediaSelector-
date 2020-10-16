@@ -15,7 +15,11 @@ const reducer = (state, action) => {
             ...state,
             user: action.payload,
           };
-        
+          case 'SET_LIKE':
+            return {
+              ...state,
+              likedmovies: [...state.likedmovies, action.payload]
+            }
       default:
         return state;
     }

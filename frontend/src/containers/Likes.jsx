@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles/Likes.css";
+import { connect } from "react-redux";
 
 function Likes() {
-
     const handleSubmit= (e) =>{
         e.preventDefault()
         window.location.href = '/home'
@@ -145,5 +145,9 @@ function Likes() {
     </div>
   );
 }
+const mapDispatchToProps = {
+  
+};
+const mapStateToProps = {};
+export default connect(null,null )(Likes);
 
-export default Likes;
