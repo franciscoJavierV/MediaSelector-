@@ -1,0 +1,69 @@
+.likes{
+ padding: 20px;
+ display: block;
+ height: 100vh;
+ width: 100%;
+ /*background: rgb(39,163,120);
+ background: radial-gradient(circle, rgba(39,163,120,1) 0%, rgba(88,72,121,1) 100%);*/
+ background: linear-gradient(286deg, rgba(87,87,87,1) 0%, rgba(0,0,0,0.9500175070028011) 50%);
+}
+.likes-tittle{
+    color: white;
+    text-align: center;
+    font-size: 38px;
+}
+.likes__form{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.likes__form-data{
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    padding: 3%;
+}
+.likes__column-label{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+.likes__column-label:hover{
+    background-color: darkslategrey;
+}
+.likes__column__checkbox{
+    
+}
+.likes__column-label{
+    margin: 10px;
+}
+.likes__button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(56, 113, 187);
+    color: white;
+    font-size: large;
+    margin-top: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#info{
+    position: absolute;
+    width: 270px;
+    height: 150px;
+}
+
+.column:hover #info {
+    opacity: 1;
+}
+
+.terror:hover p#def {
+    visibility: visible;
+    position: absolute;
+    font-size: 12px;
+}
+
+.login__container--input {
+    color: blanchedalmond;
+}
